@@ -1,0 +1,61 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "IMAP",
+      "description": "",
+      "version": "1.0"
+    },
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/": {
+        "get": {
+          "x-swagger-router-controller": "home",
+          "operationId": "index1",
+          "tags": [
+            "home route"
+          ],
+          "description": "(https://www.google.com)",
+          "responses": {}
+        }
+      },
+      "/seenemail": {
+        "post": {
+          "x-swagger-router-controller": "reademail",
+          "operationId": "index2",
+          "tags": [
+            "readEmail route"
+          ],
+          "description": "this is readEmail api to create an account ",
+          "parameters": [
+            {
+              "name": "ImapEmail",
+              "in": "formData",
+              "type": "string",
+              "required": "true"
+            },
+            {
+              "name": "imapPassword",
+              "in": "formData",
+              "type": "string",
+              "required": "true"
+            },
+            {
+                "name": "ImapHost",
+                "in": "formData",
+                "type": "string",
+                "required": "true"
+              },
+              {
+                "name": "ImapPort",
+                "in": "formData",
+                "type": "integer",
+                "required": "true"
+              }
+          ],
+          "responses": {}
+        }
+      }
+    }
+  }
