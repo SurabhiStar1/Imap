@@ -56,6 +56,43 @@
           ],
           "responses": {}
         }
+      },
+      "/deletemail": {
+        "post": {
+          "x-swagger-router-controller": "reademail",
+          "operationId": "index3",
+          "tags": [
+            "Delete Email route"
+          ],
+          "description": "this is delete email api to create an account ",
+          "parameters": [
+            {
+              "name": "ImapEmail",
+              "in": "formData",
+              "type": "string",
+              "required": "true"
+            },
+            {
+              "name": "imapPassword",
+              "in": "formData",
+              "type": "string",
+              "required": "true"
+            },
+            {
+                "name": "ImapHost",
+                "in": "formData",
+                "type": "string",
+                "required": "true"
+              },
+              {
+                "name": "ImapPort",
+                "in": "formData",
+                "type": "integer",
+                "required": "true"
+              }
+          ],
+          "responses": {}
+        }
       }
     }
   }
